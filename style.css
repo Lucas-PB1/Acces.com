@@ -14,6 +14,9 @@
 	text-decoration: none;
 	color: rgb(210,105,30); 
 }
+.dados{
+	height: 25px;
+}
 #tituloc{
 	text-align: center;
 	color: rgb(210,105,30);
@@ -41,7 +44,7 @@
 	border: double;
 	border-color:rgb(210,105,30); 
 }
-#content{
+.content{
 	text-align: center;
 }
 #coment{
