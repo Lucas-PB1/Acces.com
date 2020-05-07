@@ -1,2 +1,0 @@
-<title>Funções</title>
-<?php ?>
