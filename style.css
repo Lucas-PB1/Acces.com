@@ -1,3 +1,18 @@
+.tabela_usuarios{
+	margin-left: 550px;
+}
+.tabela_pags{
+	margin-left: 600px;
+}
+.function_adm{
+	border: double;
+	border-color: rgb(210,105,30);
+	margin-top: 20px;
+	text-align: left;
+	margin-left: 590px;
+	position: absolute;
+	text-decoration: none;
+}
 .formulario{
 	text-align: center;
 	color: rgb(210,105,30);

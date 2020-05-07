@@ -34,12 +34,16 @@ while ($dado = $conn ->fetch_array()) {
 
 if($login!= null && $senha != null){
 	if ($login == $NomeComp && $senha == $SenhaComP) {
-		header("location:?pg=inicial");
+		if ($id==1) {
+			header("location:?pg=adm_page");
+		}else{
+			header("location:../admin/index.php");
+		}
 	}else{
-		header("location:../index.php");
+		header("location:../admin/index.php");
 	}
 }else{
-	header("location:../index.php");
+	header("location:../admin/index.php");
 }
 
 
