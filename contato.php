@@ -1,6 +1,6 @@
 <title>Contato</title>
 <body>
-	<h1 class="titulo">Contato</h1>
 	<div class="format content">
+		<?php exibir_pags("Contato") ?>
 	</div>	
 </body>

@@ -1,5 +1,19 @@
+.entry{
+	width: 200px;
+	height: 90px;
+}
+.add_button_border{
+	border: double;
+	border-color: rgb(210,105,30);
+}
+.add_button_field{
+	margin-top: 8px;
+	text-decoration: none;
+	text-align: center;
+	color:rgb(210,105,30);
+}
 .tabela_usuarios{
-	margin-left: 550px;
+	margin-left: 500px;
 }
 .tabela_pags{
 	margin-left: 600px;
@@ -14,6 +28,8 @@
 	text-decoration: none;
 }
 .formulario{
+	display:flex;
+	justify-content:center;
 	text-align: center;
 	color: rgb(210,105,30);
 }
@@ -73,7 +89,9 @@
 	color: rgb(210,105,30);
 	width: 100%;
 }
-
+#button{
+	margin-left: 15px;
+}
 *{
 	background-image: url("img/background.png");
 	background-position:bottom;

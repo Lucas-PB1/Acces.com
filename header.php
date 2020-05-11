@@ -1,3 +1,4 @@
+<?php include_once("BD/contentbd.php") ?>
 <html>
 <head>
 	<meta charset="utf-8">
