@@ -1,6 +1,6 @@
-<title>Sobre</title>
+<title>Contato</title>
 <body>
-	<h1 class="titulo">Sobre o nosso Site</h1>
 	<div class="format content">
-	</div>
+		<?php exibir_pags("Sobre") ?>
+	</div>	
 </body>

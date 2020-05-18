@@ -96,23 +96,25 @@ if (!$mysqli) {
 	$consulta = "SELECT `id`, `Nome`, `Url` FROM `paginas` WHERE 1";
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
-	<table class="format tabela_pags" border="1">
-		<tr>
-			<th>Id</th>
-			<th>Titulo</th>
-			<th>Alterar</th>
-			<th>Excluir</th>
-		</tr>
-		<?php while($dado = $conn -> fetch_array()){ ?>
+	<form method="POST" action="?pg=editar_pags">
+		<table class="format tabela_pags" border="1">
 			<tr>
-				<td><?php echo $dado['id'] ?></td>
-				<td><?php echo $dado['Nome'] ?></td>
-				<td><button id="button"><a href="?pg=adicionar_pags" class="link">[ ! ]</a></button></td>
-				<td><button id="button"><a href="" class="link">[ X ]</a></button></td>
+				<th>Id</th>
+				<th>Titulo</th>
+				<th>Alterar</th>
+				<th>Excluir</th>
 			</tr>
-
-		<?php } ?>
-	</table>
+			<?php while($dado = $conn -> fetch_array()){ ?>
+				<tr>
+					<td><?php echo $dado['id'] ?></td>
+					<td><?php echo $dado['Nome'] ?></td>
+					<input type="hidden" name="Nome" value="<?php $dado['Nome'] ?>">
+					 <td><button id="button"><a  class="link" href="?pg=../admin/editar_pags&Nome=<?=$dado['Nome']; ?>">[ ! ]</a></button></td>
+					<td><button id="button"><a href="" class="link">[ X ]</a></button></td>
+				</tr>
+			<?php } ?>
+		</table>
+	</form>
 	<div class="add_button_field">
 		<label class="add_button_border">adicionar páginas: </label><button id="button"><a href="?pg=adicionar_pags" class="link">[ + ]</a></button>
 	</div>
@@ -124,10 +126,10 @@ if (!$mysqli) {
 	$consulta = "SELECT * FROM `paginas` WHERE Nome = \"$nome\"";
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
-		<?php while($dado = $conn -> fetch_array()){  ?>
-			<h1><?php echo $dado['Nome']; ?></h1>
-			<?php echo $dado['Content']; ?>
-		<?php } ?>
+	<?php while($dado = $conn -> fetch_array()){  ?>
+		<h1><?php echo $dado['Nome']; ?></h1>
+		<?php echo $dado['Content']; ?>
+	<?php } ?>
 
 	<?php mysqli_close($mysqli);
 } ?>
