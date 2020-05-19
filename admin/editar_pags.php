@@ -6,7 +6,7 @@ $conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 while($dado = $conn -> fetch_array()){
 	?>
 	<body>
-		<div class="formulario">
+		<div class="formulario content">
 			<form method="POST" action="?pg=../BD/editar_pagsbd">
 				<table class="content">
 					<tr>

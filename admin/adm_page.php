@@ -5,11 +5,15 @@
 		editar os contéudos da páginas<br>
 		e de controlar os acessos a mesma<br>
 	</p>
-	<ul class="function_adm">
-		<p>Funções do adm: </p>
-		<li><a class="link" href="?pg=listar_pags">Listar páginas</a></li>
-		<li><a class="link" href="?pg=modificar_pags">Modificar e excluir páginas</a></li>
-		<li><a class="link" href="?pg=listar_usuarios">Listar usuários</a></li>
-		<li><a class="link" href="?pg=modificar_usuarios">Modificar e excluir usuários</a></li>
-	</ul>
+	<table border="1" class="content tabela_adm">
+		<tr>
+			<th class="format">Funções do adm:</th>
+		</tr>
+		<tr>
+			<td><a class="link" href="?pg=modificar_pags">Modificar e excluir páginas</a></td>
+		</tr>
+		<tr>
+			<td><a class="link" href="?pg=modificar_usuarios">Modificar e excluir usuários</a></td>
+		</tr>
+	</table>
 </div>

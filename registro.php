@@ -1,7 +1,7 @@
 <title>Registro</title>
 <body>
 	<h1 class="titulo">Cadastro</h1>
-	<div class="formulario">
+	<div class="formulario content">
 		<form method="POST" action="?pg=BD/registrobd">
 			<legend>Dados pessoais</legend>
 			<label></label>Nome:</label><input class="dados format" type="text" name="Nome" placeholder="NOME"><br>
