@@ -83,7 +83,7 @@ if (!$mysqli) {
 	?>
 	<?php while($dado = $conn -> fetch_array()){  ?>
 		<h1><?php echo $dado['Nome']; ?></h1>
-		<?php echo $dado['Content']; ?>
+		<pre><?php echo $dado['Content']; ?></pre>
 	<?php } ?>
 
 	<?php mysqli_close($mysqli);

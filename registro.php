@@ -2,8 +2,7 @@
 <body>
 	<h1 class="titulo">Cadastro</h1>
 	<div class="formulario content">
-		<form method="POST" action="?pg=BD/registrobd">
-			<legend>Dados pessoais</legend>
+		<form method="POST" action="?pg=BD/registrobd" class="format">
 			<label></label>Nome:</label><input class="dados format" type="text" name="Nome" placeholder="NOME"><br>
 			<label>Email:</label><input class="dados format" type="text" name="Email" placeholder="EMAIL"><br>
 			<label>Senha:</label><input class="dados format" type="password" name="Senha" placeholder="SENHA"><br>

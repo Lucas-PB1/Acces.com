@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <div id="header">
-	<button ><a href="../admin/index.php" class="format">adm</a></button>
+	<button><a href="../admin/index.php" class="format">adm</a></button>
 	<a title="Acess" href="?pg=inicial"><img id="logo" src="../img/logo.png"></a>
 	<br><h1 id="tituloc">Acess</h1>
 	<nav id="menu">

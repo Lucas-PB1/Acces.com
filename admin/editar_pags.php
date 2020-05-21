@@ -14,7 +14,7 @@ while($dado = $conn -> fetch_array()){
 					</tr>
 					<tr>
 						<input type="hidden" name="titulo" value="<?=$dado['Nome'];?>">
-						<td><h3 class="format">Nome:</h3><p class="format"><?php echo $dado['Nome']; ?></p></td>
+						<td><p class="format"><?php echo $dado['Nome']; ?></p></td>
 					</tr>
 					<tr>
 						<td><h3 class="format">Contéudo:</h3><textarea class="dados format" type="text" name="conteudo" placeholder="Contéudo" o><?php echo $dado['Content'];?></textarea></td>
@@ -23,7 +23,6 @@ while($dado = $conn -> fetch_array()){
 						<td><label><input class="format" type="submit"></label></td>
 					</tr>
 				</table>
-				
 			</form> 
 		</div>
 		<?php } ?>
