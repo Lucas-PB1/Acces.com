@@ -5,15 +5,16 @@
 		editar os contéudos da páginas<br>
 		e de controlar os acessos a mesma<br>
 	</p>
-	<table border="1" class="content tabela_adm">
+	<table border="1" class="tabela_adm">
 		<tr>
 			<th class="format">Funções do adm:</th>
 		</tr>
 		<tr>
-			<td><a class="link" href="?pg=modificar_pags">Modificar e excluir páginas</a></td>
+			<td><a class="link" href="?pg=modificar_pags">Modificar páginas</a></td>
 		</tr>
 		<tr>
 			<td><a class="link" href="?pg=modificar_usuarios">Modificar e excluir usuários</a></td>
 		</tr>
 	</table>
+	<?php button_voltar() ?>
 </div>

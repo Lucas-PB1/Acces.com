@@ -8,7 +8,7 @@ while($dado = $conn -> fetch_array()){
 	<body>
 		<div class="formulario content">
 			<form method="POST" action="?pg=../BD/editar_pagsbd">
-				<table class="content">
+				<table class="content center">
 					<tr>
 						<td><h1 class="titulo">Atualize os dados da página</h1></td>
 					</tr>
@@ -20,7 +20,7 @@ while($dado = $conn -> fetch_array()){
 						<td><h3 class="format">Contéudo:</h3><textarea class="dados format" type="text" name="conteudo" placeholder="Contéudo" o><?php echo $dado['Content'];?></textarea></td>
 					</tr>
 					<tr>
-						<td><label><input class="format" type="submit"></label></td>
+						<td><button class="format">Enviar</button></td>
 					</tr>
 				</table>
 			</form> 

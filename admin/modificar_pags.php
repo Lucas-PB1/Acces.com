@@ -1,5 +1,5 @@
 <body>
-	<div>
+	<div class="content">
 		<?php modificar_pags(); ?>
 	</div>
 </body>
