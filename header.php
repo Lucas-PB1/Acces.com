@@ -14,6 +14,7 @@
 	<a title="Acess" href="?pg=inicial"><img id="logo" src="../img/logo.png"></a>
 	<br><h1 id="tituloc">Acess</h1>
 	<nav id="menu">
+		<a title="Funções" href="?pg=top_pesquisas"><label class="format">Pesquisas</label></a>
 		<a title="Sobre o Acces" href="?pg=sobre"><label class="format">Sobre</label></a>
 		<a title="Informações de contato" href="?pg=contato"><label class="format">Contato</label></a>
 		<a title="Deslogar" href="?pg=login"><label class="format">Sair</label></a>

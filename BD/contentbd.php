@@ -99,3 +99,15 @@ if (!$mysqli) {
 			<a href="#" class="link border_basic" onclick="history.go(-1)">Voltar</a>	
 		</div>
 	<?php } ?>
+
+<?php function exibir_posts(){
+		global $mysqli;
+		$consulta = "SELECT * FROM `pesquisado` WHERE 1";
+		$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
+		?>
+		<?php while($dado = $conn -> fetch_array()){  ?>
+			<h4 class="titulo"><?php echo $dado['pesquisa']; ?><h4>
+			<pre id="content_text"><?php echo $dado['resposta']; ?></pre>
+		<?php } ?>
+		<?php mysqli_close($mysqli);
+	} ?>
