@@ -15,6 +15,9 @@
 		<tr>
 			<td><a class="link" href="?pg=modificar_usuarios">Modificar e excluir usuários</a></td>
 		</tr>
+		<tr>
+			<td><a class="link" href="?pg=responder_perguntas">Responder perguntas</a></td>
+		</tr>
 	</table>
 	<?php button_voltar() ?>
 </div>
