@@ -9,16 +9,22 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <div id="header">
 	<button><a href="../admin/index.php" class="format">adm</a></button>
 	<a title="Acess" href="?pg=inicial"><img id="logo" src="../img/logo.png"></a>
 	<br><h1 id="tituloc">Acess</h1>
-	<nav id="menu">
-		<a title="Funções" href="?pg=top_pesquisas"><label class="format">Pesquisas</label></a>
-		<a title="Respostas" href="?pg=post"><label class="format">Respostas</label></a>
-		<a title="Sobre o Acces" href="?pg=sobre"><label class="format">Sobre</label></a>
-		<a title="Informações de contato" href="?pg=contato"><label class="format">Contato</label></a>
-		<a title="Deslogar" href="?pg=login"><label class="format">Sair</label></a>
-	</nav>
+	<div class="dropdown" id="menu">
+		<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color: orange;border-color: orange">
+			Menu
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item active" style="color: orange" href="?pg=top_pesquisas">Pesquisa</a>
+			<a class="dropdown-item active" style="color: orange" href="?pg=post">Respostas</a>
+			<a class="dropdown-item active" style="color: orange" href="?pg=sobre">Sobre</a>
+			<a class="dropdown-item active" style="color: orange" href="?pg=Contato">Contato</a>
+			<a class="dropdown-item active" style="color: orange" href="?pg=login">Sair</a>
+		</div>
+	</div>
 </div>
 

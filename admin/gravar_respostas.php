@@ -18,7 +18,7 @@ while($dado = $conn -> fetch_array()){
 							<td><label>Data:</label><br><p class="format" name="data"><?php echo $dado['data'];?></p></td>
 						</tr>
 						<tr>
-							<td><label>Resposta:</label><br><textarea class="format" type="text" name="resposta" placeholder="Resposta"></textarea></td>
+							<td><label>Resposta:</label><br><textarea style="color: white" class="format" type="text" name="resposta" placeholder="Resposta"></textarea></td>
 						</tr>
 						<tr>
 							<td><button class="format">Enviar</button></td>

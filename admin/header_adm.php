@@ -14,6 +14,9 @@
 	<a title="Acess" href="?pg=../inicial"><img id="logo" src="../img/logo.png"></a>
 	<br><h1 id="tituloc">Acess</h1>
 	<nav id="menu">
-		<a title="Deslogar" href="../index.php"><label class="format">Sair</label></a>
+		<div>
+		<button type="button" class="btn btn-primary" style="color: orange; border-color: orange">
+			<a href="../index.php" class="link"> Sair </a>
+		</button>
 	</nav>
 </div>

@@ -21,7 +21,7 @@ if (!$mysqli) {
 	$consulta = "SELECT `id`, `Nome`,`Email` FROM `usuarios` WHERE 1";
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
-	<table class="format tabela_usuarios" border="1">
+	<table class="format tabela table-bordered">
 		<tr>
 			<th>Id</th>
 			<th>Nome</th>
@@ -34,8 +34,8 @@ if (!$mysqli) {
 				<td><?php echo $dado['id'] ?></td>
 				<td><?php echo $dado['Nome'] ?></td>
 				<td><?php echo $dado['Email'] ?></td>
-				<td><button id="big_space_button"><a  class="link" href="?pg=../admin/editar_usuarios&Nome=<?=$dado['Nome']; ?>">[ ! ]</a></button></td>
-				<td><button id="big_space_button"><a href="javascript:confirmaExclusao('?pg=../BD/excluir_usuariosbd&id=<?=$dado['id']; ?>')" class="link">[ X ]</a>
+				<td><button id="space_button"><a  class="link" href="?pg=../admin/editar_usuarios&Nome=<?=$dado['Nome']; ?>">[!]</a></button></td>
+				<td><button id="space_button"><a href="javascript:confirmaExclusao('?pg=../BD/excluir_usuariosbd&id=<?=$dado['id']; ?>')" class="link">[X]</a>
 				</button></td>
 			</tr>
 		<?php } ?>
@@ -50,7 +50,7 @@ if (!$mysqli) {
 		</script>
 	</table>
 	<div class="add_button_field">
-		<label class="add_button_border">adicionar usuários: <button id="big_space_button"><a href="?pg=adicionar_usuarios" class="link">[ + ]</a></button></label>
+		<label class="add_button_border">adicionar usuários: <button><a href="?pg=adicionar_usuarios" class="link">[+]</a></button></label>
 	</div>
 	<?php button_voltar() ?>
 	<?php mysqli_close($mysqli);
@@ -62,7 +62,7 @@ if (!$mysqli) {
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
 	<form method="POST" action="?pg=editar_pags">
-		<table class="format tabela_pags" border="1">
+		<table class="format litle_tabela table-bordered" >
 			<tr>
 				<th>Id</th>
 				<th>Titulo</th>
@@ -73,7 +73,7 @@ if (!$mysqli) {
 					<td><?php echo $dado['id'] ?></td>
 					<td><?php echo $dado['Nome'] ?></td>
 					<input type="hidden" name="Nome" value="<?php $dado['Nome'] ?>">
-					<td><button id="litle_space_button"><a  class="link" href="?pg=../admin/editar_pags&Nome=<?=$dado['Nome']; ?>">[ ! ]</a></button></td>
+					<td><button id="space_button"><a  class="link" href="?pg=../admin/editar_pags&Nome=<?=$dado['Nome']; ?>">[!]</a></button></td>
 				</tr>
 			<?php } ?>
 		</table>
@@ -94,6 +94,7 @@ if (!$mysqli) {
 
 	<?php mysqli_close($mysqli);
 } ?>
+
 <?php function button_voltar(){ ?>
 	<div class="button_voltar">
 		<a href="#" class="link border_basic" onclick="history.go(-1)">Voltar</a>	
@@ -108,7 +109,7 @@ if (!$mysqli) {
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
 	<form method="POST" action="#">
-		<table class="format tabela_usuarios" border="1">
+		<table class="format tabela table-bordered">
 			<tr>
 				<th>Perguntas</th>
 				<th>Data</th>
@@ -119,7 +120,7 @@ if (!$mysqli) {
 				<tr>
 					<td><?php echo $dado['pesquisa'] ?></td>
 					<td><?php echo $dado['data'] ?></td>
-					<td><button id="big_space_button"><a  class="link" href="?pg=../admin/gravar_respostas&pesquisa=<?=$dado['pesquisa']; ?>">[ ! ]</a></button></td>
+					<td><button id="space_button"><a class="link" href="?pg=../admin/gravar_respostas&pesquisa=<?=$dado['pesquisa']; ?>">[!]</a></button></td>
 					<td><?php echo $dado['exibir'] ?></td>
 				</tr>
 			<?php } ?>
@@ -130,26 +131,36 @@ if (!$mysqli) {
 } ?>
 
 <?php function exibir_posts(){
+	//Função de selecionar o contéudo da tabela
 	global $mysqli;
 	$consulta = "SELECT * FROM `pesquisado` WHERE 1";
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
-	<table class="format tabela_usuarios">
+	<!-- Tabela de dados -->
+	<table class="format tabela table-bordered">
+		<!-- tr é a linha da tabela -->
 		<tr>
+			<!-- th é o titulo -->
 			<th>Perguntas</th>
 			<th>Data</th>
 		</tr>
+		<!-- Aqui ele começa a varrer a linha selecionada no banco de dados -->
 		<?php while($dado = $conn -> fetch_array()){ ?>
+			<!-- Outra linha da tabela -->
 			<tr>
+				<!-- se o dado exibir for "sim", ele exibe na tela -->
 				<?php if ("sim"==$dado['exibir']) { ?>
+					<!-- chamando os dois dados, pesquisa é a pergunta e data é data -->
 					<td><?php echo $dado['pesquisa'] ?></td>
 					<td><?php echo $dado['data'] ?></td>
 				</tr>
 				<tr>
+					<!-- $dado['resposta'] é a resposta -->
 					<td><?php echo $dado['resposta']."<hr>"?></td>
 				</tr>
-			<?php } ?>
-		<?php } ?>
-	</table>
-	<?php mysqli_close($mysqli);
+				<!-- Se exibir for não, não faz nada -->
+			<?php } //Fim do if?>
+		<?php } //Fim do while?>
+	</table><!-- Fim da tabela -->
+	<?php mysqli_close($mysqli); //Fechando acesso ao banco de dados
 } ?>

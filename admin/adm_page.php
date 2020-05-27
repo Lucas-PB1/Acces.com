@@ -5,7 +5,7 @@
 		editar os contéudos da páginas<br>
 		e de controlar os acessos a mesma<br>
 	</p>
-	<table border="1" class="tabela_adm">
+	<table class="tabela_adm table-bordered">
 		<tr>
 			<th class="format">Funções do adm:</th>
 		</tr>
