@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03-Jun-2020 às 17:05
+-- Tempo de geração: 03-Jun-2020 às 17:25
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.3.15
 
@@ -25,31 +25,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `history`
---
-
-CREATE TABLE IF NOT EXISTS `history` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(40) NOT NULL,
-  `email` varchar(40) NOT NULL,
-  `data` date NOT NULL,
-  `cont` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`cont`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `paginas`
 --
 
-CREATE TABLE IF NOT EXISTS `paginas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `paginas` (
+  `id` int(11) NOT NULL,
   `Nome` varchar(50) NOT NULL,
   `Content` text NOT NULL,
-  `Url` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4;
+  `Url` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `paginas`
@@ -61,43 +45,25 @@ INSERT INTO `paginas` (`id`, `Nome`, `Content`, `Url`) VALUES
 (3, 'Inicial', 'Bem vindo ao Acces, servindo\r\na você desde de 2020.\r\nNosso site tem por objetivo Responder suas perguntas\r\ne trazer as reflexão sobre questões do cotidiano.', 'http://acces.com.br/?pg=inicial'),
 (4, 'Pesquisas', 'Bem vindo as área de funções\r\nFaça sua pesquisa:', 'http://acces.com.br/index.php?pg=functions');
 
--- --------------------------------------------------------
-
 --
--- Estrutura da tabela `pesquisado`
+-- Índices para tabelas despejadas
 --
 
-CREATE TABLE IF NOT EXISTS `pesquisado` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(40) NOT NULL,
-  `pesquisa` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `resposta` text NOT NULL,
-  `data` date NOT NULL,
-  `exibir` varchar(4) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
+--
+-- Índices para tabela `paginas`
+--
+ALTER TABLE `paginas`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Estrutura da tabela `usuarios`
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Nome` text NOT NULL,
-  `Email` text NOT NULL,
-  `Senha` text NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `Nome` (`Nome`) USING HASH
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
-
 --
--- Extraindo dados da tabela `usuarios`
+-- AUTO_INCREMENT de tabela `paginas`
 --
-
-INSERT INTO `usuarios` (`id`, `Nome`, `Email`, `Senha`) VALUES
-(1, 'Lucas', 'lucasoaresnet@gmail.com', 'Senha');
+ALTER TABLE `paginas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
