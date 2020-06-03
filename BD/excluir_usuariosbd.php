@@ -1,4 +1,4 @@
-<title>Editar páginas</title>
+<title>Excluir páginas</title>
 <?php
 $id = $_REQUEST['id'];
 $consulta = "SELECT * FROM `usuarios` WHERE id ='$id'";

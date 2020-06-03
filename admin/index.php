@@ -1,7 +1,7 @@
 <?php include_once("../admin/header_adm.php");
 #conteudo
 if(empty($_SERVER["QUERY_STRING"])){
-	$var = "login_adm.php";
+	$var = "adm_page.php";
 	include_once("$var");
 }else{
 	$pg = $_GET['pg'];

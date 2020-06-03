@@ -115,16 +115,28 @@ if (!$mysqli) {
 				<th>Data</th>
 				<th>Responder</th>
 				<th>Respondido?</th>
+				<th>Excluir</th>
 			</tr>
 			<?php while($dado = $conn -> fetch_array()){ ?>
 				<tr>
 					<td><?php echo $dado['pesquisa'] ?></td>
 					<td><?php echo $dado['data'] ?></td>
-					<td><button id="space_button"><a class="link" href="?pg=../admin/gravar_respostas&pesquisa=<?=$dado['pesquisa']; ?>">[!]</a></button></td>
+					<?php $pesquisa = $dado['pesquisa']; ?>
+					<td><button id="space_button"><a class="link" href="?pg=../admin/gravar_respostas&id=<?=$dado['id']; ?>">[!]</a></button></td>
 					<td><?php echo $dado['exibir'] ?></td>
+					<td><button id="space_button"><a href="javascript:confirmaExclusao('?pg=../BD/excluir_perguntasbd&id=<?=$dado['id']; ?>')" class="link">[X]</a>
+					</button></td>
 				</tr>
 			<?php } ?>
 		</table>
+		<script>
+			function confirmaExclusao(aURL) {
+				if(confirm('Você tem certeza que deseja excluir?')) {
+					location.href = aURL;
+				}
+			}
+
+		</script>
 		<?php button_voltar() ?>
 	</form>
 	<?php mysqli_close($mysqli);
@@ -136,31 +148,34 @@ if (!$mysqli) {
 	$consulta = "SELECT * FROM `pesquisado` WHERE 1";
 	$conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 	?>
-	<!-- Tabela de dados -->
-	<table class="format tabela table-bordered">
-		<!-- tr é a linha da tabela -->
-		<tr>
-			<!-- th é o titulo -->
-			<th>Perguntas</th>
-			<th>Data</th>
-		</tr>
-		<!-- Aqui ele começa a varrer a linha selecionada no banco de dados -->
-		<?php while($dado = $conn -> fetch_array()){ ?>
+	<!-- Aqui ele começa a varrer a linha selecionada no banco de dados -->
+	<?php while($dado = $conn -> fetch_array()){ ?>
+		<!-- Tabela de dados -->
+		<table class="format tabela table-bordered">
+			<!-- tr é a linha da tabela -->
+			<tr>
+				<!-- th é o titulo -->
+				<th>Perguntas</th>
+				<th>Dados</th>
+			</tr>
 			<!-- Outra linha da tabela -->
 			<tr>
 				<!-- se o dado exibir for "sim", ele exibe na tela -->
 				<?php if ("sim"==$dado['exibir']) { ?>
 					<!-- chamando os dois dados, pesquisa é a pergunta e data é data -->
-					<td><?php echo $dado['pesquisa'] ?></td>
-					<td><?php echo $dado['data'] ?></td>
+					<td class="center"><?php echo $dado['pesquisa'] ?></td>
+					<td class="center"><?php echo $dado['data'] ?></td>
 				</tr>
 				<tr>
 					<!-- $dado['resposta'] é a resposta -->
-					<td><?php echo $dado['resposta']."<hr>"?></td>
+					<td class="center"><?php echo $dado['resposta']?></td>
+					<td class="center"><?php echo $dado['nome']?></td>
 				</tr>
 				<!-- Se exibir for não, não faz nada -->
 			<?php } //Fim do if?>
-		<?php } //Fim do while?>
-	</table><!-- Fim da tabela -->
+		</table><!-- Fim da tabela -->
+		<br>
+	<?php } //Fim do while?>
+
 	<?php mysqli_close($mysqli); //Fechando acesso ao banco de dados
 } ?>

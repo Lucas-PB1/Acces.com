@@ -1,6 +1,6 @@
 <title>Gravar respostas</title>
-<?php $pergunta = $_REQUEST ['pesquisa'];
-$consulta = "SELECT * FROM `pesquisado` WHERE pesquisa ='$pergunta'";
+<?php $id = $_REQUEST['id'];
+$consulta = "SELECT * FROM `pesquisado` WHERE id ='$id'";
 $conn = $mysqli -> query ($consulta) or die ($mysqli->error);
 
 while($dado = $conn -> fetch_array()){
