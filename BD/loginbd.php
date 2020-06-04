@@ -22,16 +22,17 @@ if ($login!= null && $senha != null) {
 			$history = "INSERT INTO `history`(`id`, `nome`, `email`,`data`) VALUES (\"$id\",\"$NomeComp\",\"$email\",\"$data\")";
 			$conn = $mysqli -> query($history) or die ($mysqli->error);
 			header("location:admin/index.php");
+		}else{
+			header("location:../index.php");
 		}
 	}else{
 		if ($login == $NomeComp && $senha == $SenhaComP) {
 			$history = "INSERT INTO `history`(`id`, `nome`, `email`,`data`) VALUES (\"$id\",\"$NomeComp\",\"$email\",\"$data\")";
 			$conn = $mysqli -> query($history) or die ($mysqli->error);
 			header("location:?pg=inicial");
-		}else{
-			header("location:../index.php");
 		}
 	}
+
 }else{
 	header("location:../index.php");
 }

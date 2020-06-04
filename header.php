@@ -12,7 +12,7 @@
 
 <div id="header">
 	<a title="Acess" href="?pg=inicial"><img id="logo" src="../img/logo.png"></a>
-	<br><h1 id="tituloc">Acess</h1>
+	<br><h1 id="tituloc">Acces</h1>
 	<div class="dropdown" id="menu">
 		<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="color: orange;border-color: orange">
 			Menu

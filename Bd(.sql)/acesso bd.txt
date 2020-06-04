@@ -1,3 +1,10 @@
 Nome da base de dados:lucas
 Nome do usuario: lucas_acces
-Senha:lAm5J{0HE~dL)um~
+Senha:3i7/?Wo#_dLyX
+host: mysql669.umbler.com
+porta: 41890
+
+$host ="mysql669.umbler.com";
+$user = "lucas_acces";
+$Password = "3i7/?Wo#_dLyX";
+$DB =  "lucas";
