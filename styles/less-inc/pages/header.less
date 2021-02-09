@@ -1,0 +1,27 @@
+@import "../less-inc/rules/variaveis.less";
+@import "../less-inc/rules/fonts.less";
+
+#header {
+    padding        : 10px;
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+
+    #logo {
+        img {
+            width : auto;
+            height: 130px;
+
+        }
+    }
+
+    #title {
+        align-self: center;
+        h1 {
+            font-family   : "coolvetica";
+            font-size     : 3em;
+            text-transform: uppercase;
+            color         : @default-color-text;
+        }
+    }
+}

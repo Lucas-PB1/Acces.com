@@ -1,0 +1,23 @@
+@import "../mixins/mixins.less";
+
+#registro {
+    .center();
+    text-align: center;
+
+    form {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+
+        input[name=email] {
+            width: 420px;
+        }
+
+        input,
+        button {
+            padding: 7px;
+            margin : 5px;
+        }
+    }
+
+}

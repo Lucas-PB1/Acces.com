@@ -1,0 +1,24 @@
+{
+  "name": "access.com",
+  "version": "1.0.0",
+  "description": "Um site de aprendizado",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-PB1/Access.com.git"
+  },
+  "author": "Lucas Soares Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucas-PB1/Access.com/issues"
+  },
+  "homepage": "https://github.com/Lucas-PB1/Access.com#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}

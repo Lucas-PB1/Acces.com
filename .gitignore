@@ -1,0 +1,5 @@
+##Ignorando modulos
+node_modules
+
+##ignorando css
+styles/imports/access.css
